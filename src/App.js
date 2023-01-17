@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/Navbar.js';
+import TextForm from './components/TextForm.js';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+return(
+  <div>
+<Navbar title="My Nav" text="Home"/>
+<div className="container my-3">  
+{/* container is boostrap class  */}
+<TextForm heading="text to Analize"/>
+</div>
+
+{/* <Navbar  text="About Aircampus"/>   */}
+
+{/* in second navbar default title will be show which we have declare in NAvbar.js below in Navbar.defaultProps  */}
+
+{/* this title is props. jeware aa navabar ne use karu hase we can only change this title and we can re use it  */}
+
+  </div>
+)
 }
 
 export default App;
